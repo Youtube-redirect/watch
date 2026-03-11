@@ -11,18 +11,20 @@ fetch("https://script.google.com/macros/s/AKfycbyNnX0hS_UQ5R0KTtOVcZ_Sa11lovp2SR
 <head>
 <meta charset="UTF-8">
 
-<meta property="og:title" content="YouTube">
-<meta property="og:description" content="YouTube動画を見る">
+<meta property="og:title" content="YouTube動画">
+<meta property="og:description" content="クリックして視聴">
 <meta property="og:image" id="img">
 
 <script>
 const v=new URLSearchParams(location.search).get("v");
 
 if(v){
-document.getElementById("img").content=
-"https://i.ytimg.com/vi/"+v+"/hq720.jpg";
+
+document.getElementById("img").content =
+"https://i.ytimg.com/vi/"+v+"/maxresdefault.jpg";
 
 location.replace("https://www.youtube.com/watch?v="+v);
+
 }
 </script>
 
